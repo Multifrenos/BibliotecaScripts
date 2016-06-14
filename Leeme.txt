@@ -1,0 +1,4 @@
+No están todas en www, ya que algunas son modulos o plugin que se intalan en Joomla.
+
+Fuente de Select-Ajax
+http://anexsoft.com/p/66/llenar-un-select-mediante-ajax-con-php-y-jquery-usando-json
