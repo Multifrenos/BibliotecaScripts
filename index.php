@@ -15,7 +15,11 @@
     <h1>El objetivo</h1>
     <p>Conseguir tener una metodología para crear un repositorio en GITHUB que podamos tener pequeños script que podemos necesitar.</p>
     <p>Esto será publico, por lo que no se podrá tener contraseña y usuarios privados.</p>
-    <p>La metodología de compartir será a traves de la cuenta de GIT HUB de multifrenos, creando un proyecto ( repositorio ) en GitHub por llamado "Biblioteca de Scripts".El incoveniente que le encuentro es que tenemos que tenemos un GIT unico, pero bueno , creo que podríamos solucionarlos con ramas (branch), o con submodulos.</p>
+    <p>La metodología de compartir será a traves de la cuenta de GIT HUB de multifrenos, creando un proyecto ( repositorio ) en GitHub por llamado "Biblioteca de Scripts".El inconveniente que le encuentro es que tenemos que tenemos un GIT unico, pero bueno , creo que podríamos solucionarlos con ramas (branch), o con submodulos.</p>
+    <p>Lo primero que hacemos es crear un repositorio GitHub y desde nuestro repositorio local, añadimos con:</p>
+    <code>git remote add Github //url del repositorio...</code>
+    <p>Luego simplemente solo tenemos en enviarlo todo con:</p>
+    <code>git push Github --all</code>
     <p>El listado de carpetas, tendremos clasificado por los distintos tipo:</p>
     <ul>
     <li> JQuery y Ajax </li>
