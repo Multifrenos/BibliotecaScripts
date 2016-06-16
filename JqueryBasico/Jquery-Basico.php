@@ -49,8 +49,12 @@
 			</div>
 			<div class="col-md-6">
 				<div>
-					<h3>Ejemplo 2:</h3>
+					<h3>Ejemplo 2: Traer variable (array) con Json</h3>
 					<p>Traer datos en formato json del servidor mediante ajax y mostrarlo en un input y un element html</p>
+					<div class="alert alert-warning"> <strong>Recuerda !</strong>
+					<p> Tienes que tener el fichero "datos_json.php" en el mismo directorio que este fichero.</p>
+					
+					</div>
 					<p>
 						<button id="btn_json_call" type="button">Cargar</button>
 						<button id="btn_reset2" type="reset">Limpiar</button>
@@ -65,6 +69,7 @@
 				echo json_encode($valores);
 				?>
 				</pre>
+				<?php echo $html;?>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -79,9 +84,9 @@
 				$("#txt_dato").val("");
 				$("#sp_dato").html("");
 			});
-			//Traer Datos Json
+			//Traer Datos Json de fichero traer_datos_json.php
 			$("#btn_json_call").click(function(){
-				$.get("traer_datos_json.php", function(result){
+				$.get("datos_json.php", function(result){
 					var json=$.parseJSON(result);
 					$("#txt_dato1").val(json.dato1);
 					$("#txt_dato2").val(json.dato2);
