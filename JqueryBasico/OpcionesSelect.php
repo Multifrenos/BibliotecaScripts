@@ -22,25 +22,30 @@
 						<div class="marca">
 						<label class="marca">Marca</label>
 						<!-- Cargamos select con marcas -->
-						<select name="myMarca" id="myMarca" onchange="myFunction(this.value)">
+						<select name="myMarca" id="myMarca" onchange="DespuesAjax()">
 							<option value="0">Seleccione una marca</option>
 							<option value="1">Renault</option>
 							<option value="2">Citroen</option>
 						</select>
+						<input id="CheckMarca" type="checkbox" name="vehicle" value="Sin Seleccionar" onchange="CambioMarcas()"> Selecciono Marca<br>
 						</div>
 						<!-- Presentacion de modelo -->
 						<div class="nodelo">
 						<label class="nodelo">Modelo</label>
 									<!-- Cargamos select con marcas -->
-						<select disabled name="Minodelo" id="nodelo" >
+						<select disabled name="Minodelo" id="nodelo" onchange="CambioModelos()">
 							<option value="0">Seleccione una modelo</option>
 						</select>
 				
 						</div>
 						<!-- Presentacion de version -->
-						<div class="version">
-						<label class="version">Version</label>
-						<input name="data" type="text">
+						<div class="versiones">
+						<label class="versiones">Versiones</label>
+									<!-- Cargamos select con marcas -->
+						<select disabled name="MiVersiones" id="versiones">
+							<option value="0">Seleccione una modelo</option>
+						</select>
+				
 						</div>
 									
 						<div class="enviar"></div>
@@ -58,9 +63,30 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			var modelo;modelo[1]='Clio';modelo[2]='C3'
+			modelo =['Clio','C3'];
+			modeloId = [1,2];
+			
 		</script>
-		
+		<script type="text/javascript">
+		function DespuesAjax() {
+        if (document.getElementById("CheckMarca").value == 'Sin Seleccionar' ){
+                if (document.getElementById("myMarca").value != 0){ 
+					document.getElementById("CheckMarca").checked = "checked";
+					document.getElementById("CheckMarca").value = 'Seleccionado';
+					alert(document.getElementById("CheckMarca").value);
+					CambioMarcas();
+				}
+         } else {
+                if (document.getElementById("myMarca").value == 0){ 
+					document.getElementById("CheckMarca").checked = "";
+					document.getElementById("CheckMarca").value = 'Sin Seleccionar';
+					alert(document.getElementById("CheckMarca").value);
+				}
+
+        }
+}
+
+		</script>
 		
 	</body>
 </html>
